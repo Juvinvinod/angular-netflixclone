@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --background: #141414;
+  --modal: #181818;
+  --white: #ffffff;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+
+/* Reset */
+
+
+body{min-height:200vh;
+background-color: #141414;}

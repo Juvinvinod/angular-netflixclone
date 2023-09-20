@@ -1,0 +1,140 @@
+
+.navbar-default{
+  transition:500ms ease;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.685), rgba(0, 0, 0, 0));
+
+}
+
+.navbar-default.scrolled{
+  background:#141414;
+}
+
+.nav-link{
+  font-size:18px !important;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+  padding-left:8px;
+}
+
+.search-icon {
+  cursor: pointer;
+}
+
+.search-bar {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: 0;
+  transition: width 0.3s ease-in-out;
+  padding: 5px;
+  font-size: 16px;
+  font-size: 15px;
+
+}
+.expand{
+  border-color: white;
+}
+
+.expanded {
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0.171);
+}
+
+/* Style for the dropdown button */
+.account-dropdown-button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Style for the dropdown caret */
+.caret::before {
+  content: "\25BE"; /* Unicode for downward-pointing triangle */
+  font-size: 12px;
+  margin-left: 5px;
+  color: white;
+}
+
+.caret.open::after {
+  transform: rotate(180deg);
+}
+
+/* Style for the dropdown content */
+
+/* Show the dropdown content when the button is clicked */
+
+/* Style for profile icons */
+.profile-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+
+/* Style for profile names */
+.profile-name {
+  font-weight: bold;
+}
+
+.account-drop-down {
+  display: none;
+  margin-left: 0;
+  margin-right: 50px;
+  padding: 0 0 0 0;
+  position: absolute;
+  right: 0;
+  top: 52px;
+  width: 220px;
+  z-index: 1;
+}
+
+/* Show the dropdown content when the button is clicked */
+.account-drop-down.show {
+  display: block;
+}
+
+.sub-menu-list {
+  padding-left:10px;
+  padding-top: 20px;
+}
+
+/* Style for links in the dropdown */
+.sub-menu-link {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+
+.sub-menu-link:hover {
+  background-color: #f0f0f025;
+}
+
+.sub-menu-item {
+  list-style: none;
+
+}
+
+.profile-link {
+  text-decoration: none;
+  color: white;
+}
+
+.sub-menu.theme-lakira {
+  background-color: rgba(0,0,0,.9);
+  border: 1px solid hsla(0,0%,100%,.15);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: default;
+  font-size: 13px;
+  line-height: 21px;
+  opacity: 0;
+  position: absolute;
+  top: 71px;
+}

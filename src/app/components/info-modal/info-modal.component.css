@@ -1,0 +1,307 @@
+
+
+/* Cores */
+:root {
+  --background: #141414;
+  --modal: #181818;
+  --white: #ffffff;
+}
+
+span{
+  font-size:15px !important
+}
+
+.more{
+  padding-right: 25px;
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-left:20px;
+  background-color: rgba(92, 85, 85, 0.712);
+}
+.more:hover {
+  background-color: rgba(92, 85, 85, 0.301); /* Adjust the alpha value for desired transparency */
+}
+
+.modal-header {
+  position: relative;
+}
+
+ .modal-header::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: "";
+  background: linear-gradient(0deg, var(--modal), transparent 50%);
+}
+
+ .modal-header video {
+  border-radius: 6px 6px 0 0;
+  display: block;
+  width: 100%;
+  opacity: 1;
+}
+
+
+.small-button svg {
+  width: 12px; /* Adjust the width of the SVG icon */
+  height: 12px; /* Adjust the height of the SVG icon */
+  fill: currentColor; /* Maintain the current color (currentColor is inherited from the button's color) */
+}
+
+.modal-header .close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1em;
+  z-index: 2;
+  cursor: pointer;
+  background-color: var(--modal);
+  color: var(--white);
+  border-radius: 50%;
+  height: 36px;
+  padding: 8px;
+  width: 36px;
+  border: 0;
+}
+
+.modal-header .close svg {
+  outline: none;
+}
+
+.modal-header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 0 52px;
+  margin-bottom: 70px;
+  z-index: 2;
+}
+
+.modal-header .header-content .header-title {
+  width: 100%;
+}
+
+.modal-header .header-content .header-title > img {
+  width: 40%;
+  margin-bottom: 1.5em;
+}
+
+.modal-header .header-content .header-title .header-buttons {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.modal-header .header-content .header-title .header-buttons button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  cursor: pointer;
+  max-height: 42px;
+  min-height: 32px;
+  font-size: 1.6rem;
+}
+
+.modal-header .header-content .header-title .header-buttons .play,
+.modal-header .header-content .header-title .header-buttons .add {
+  margin-right: 10px;
+}
+
+.modal-header .header-content .header-title .header-buttons .play {
+  appearance: none;
+  border: 0;
+  border-radius: 4px;
+  padding-left: 2rem;
+  padding-right: 2.4rem;
+  background-color: var(--white);
+  color: var(--background);
+  font-weight: 700;
+  line-height: 2.4rem;
+}
+
+.modal-header .header-content .header-title .header-buttons .play svg {
+  height: 100%;
+  width: 100%;
+  margin-right: 10px;
+}
+
+.modal-header .header-content .header-title .header-buttons .volume,
+.modal-header .header-content .header-title .header-buttons .add,
+.modal-header .header-content .header-title .header-buttons .rate {
+  max-width: 22px; max-height: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  background-color: rgba(42, 42, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-width: 2px;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  color: var(--white);
+  border-radius: 50%;
+}
+
+
+  .modal-header
+  .header-content
+  .header-title
+  .header-buttons
+  .volume:hover,
+ .modal-header .header-content .header-title .header-buttons .add:hover,
+ .modal-header .header-content .header-title .header-buttons .rate:hover {
+  border-color: var(--white);
+  background-color: rgba(42, 42, 42, 1);
+}
+
+.modal-header .header-content .header-title .header-buttons .volume {
+  position: absolute;
+  right: 0;
+  opacity: 0.4;
+  transition: opacity 0.2s ease-in-out;
+}
+
+
+  .modal-header
+  .header-content
+  .header-title
+  .header-buttons
+  .volume:hover {
+  opacity: 1;
+}
+
+.modal-body {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 10px;
+  padding: 15px 48px;
+}
+
+.modal-body .modal-content-first {
+  padding-right: 40px;
+  line-height: 25px;
+}
+
+.modal-body .modal-content-first .modal-description {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.modal-body .modal-content-first .modal-description span,
+.modal-body .modal-content-first .modal-description svg {
+  margin-right: 10px;
+}
+
+.modal-body .modal-content-first .modal-description span:first-child {
+  color: #46d369;
+}
+
+.modal-body .modal-content-first .modal-description span {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.modal-body .modal-content-first .modal-description svg {
+  width: 30px;
+}
+.modal-body .modal-content-first .modal-description .description-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15px;
+  border: 1px solid hsla(0, 0%, 100%, 0.4);
+  border-radius: 3px;
+  color: hsla(0, 0%, 100%, 0.9);
+  font-size: 1.2rem;
+  padding: 0 0.5em;
+  white-space: nowrap;
+}
+
+.modal-body .modal-content-first p {
+  font-size: 1.4rem;
+  line-height: 24px;
+  word-break: break-word;
+}
+
+.modal-body .modal-content-second {
+  word-break: break-word;
+}
+
+ .modal-body .modal-content-second span {
+  line-height: 20px;
+}
+
+.modal-body .modal-content-second .title {
+  color: #777;
+}
+
+.modal-body .modal-content-second .cast,
+.modal-body .modal-content-second .genres,
+ .modal-body .modal-content-second .show {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+
+.modal-body .modal-content-first,
+.modal-body .modal-content-second {
+  width: 100%;
+  font-size: 1.6rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.visuallyhidden {
+  opacity: 0;
+}
+
+@media screen and (min-width: 1080px) {
+}
+
+@media screen and (max-width: 1280px) {
+}
+
+@media screen and (max-width: 768px) {
+ .modal-header .header-content .header-title .header-buttons .add,
+.modal-header .header-content .header-title .header-buttons .rate,
+ .modal-header .header-content .header-title .header-buttons .volume {
+    width: 32px;
+    height: 32px;
+  }
+
+ .modal-header .header-content {
+    margin-bottom: 40px;
+  }
+
+  .modal-header .header-content .header-title .header-buttons .play {
+    height: 32px;
+    font-size: 1.2rem;
+    padding-left: 1.5rem;
+    padding-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 688px) {
+  .modal-body {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+
+  .modal-body .modal-content-second {
+    grid-row: 2;
+  }
+}
+
+@media screen and (max-width: 375px) {
+}

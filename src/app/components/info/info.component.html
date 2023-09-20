@@ -1,0 +1,14 @@
+<video autoplay loop [poster]="generatePosterUrl(tvData.backdrop_path)" id="player1" preload="none">
+
+</video>
+
+
+
+<div class="header-content">
+  <div class="header-title">
+    <h6 class="col-10" style="font-size: 50px;">{{ tvData.name ? tvData.name : tvData.title }}</h6>
+
+    <div class="header-buttons">
+      <a class="btn btn-light py-1 mx-2" style="font-size: 25px;">
+        <fa-icon [icon]="faPlay" class="px-2"></fa-icon> Play
+      </a>

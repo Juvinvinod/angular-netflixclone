@@ -1,0 +1,61 @@
+.movie-banner {
+  width: 100%;
+  height: 550px;
+  position: relative;
+  background-size: cover;
+  background-position: top;
+  overflow: hidden;
+}
+
+.gradient-overlay {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0));
+}
+
+.tv-show-name {
+  font-size: 100px;
+  font-weight: bold;
+  line-height: 95%;
+  color: white;
+}
+
+.tv-show-desc{
+  margin-top: 12px;
+}
+
+.tv-show{
+  position: absolute;
+  top: 40%;
+  left:5%;
+}
+
+.play{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding-right: 25px;
+  padding-left: 20px;
+  margin-top: 10px;
+  border-radius: 5px !important;
+}
+
+.play:hover{
+  border:rgba(255, 255, 255, 0.555);
+  background-color: rgba(255, 255, 255, 0.555) !important;
+}
+
+.more{
+  padding-right: 25px;
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-left:20px;
+  background-color: rgba(92, 85, 85, 0.712);
+}
+
+.more:hover {
+  background-color: rgba(92, 85, 85, 0.301); /* Adjust the alpha value for desired transparency */
+}

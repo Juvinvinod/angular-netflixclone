@@ -1,0 +1,27 @@
+
+<div class="tv-show-list-container" (mousedown)="onMouseDown($event)" (mouseleave)="onMouseUp()" (mouseup)="onMouseUp()" (mousemove)="onMouseMove($event)">
+  <h5 class="text-white px-4 heading">{{heading}} <span class="arrow">&gt;</span></h5>
+  <div class="tv-show-list" #tvShowList>
+  <div class="tv-show-card" *ngFor="let show of tvShows" (mouseenter)="onMouseEnter(show)" (mouseleave)="onMouseLeave()">
+    <div class="card-content">
+    <img class="show-poster" [src]="getImageUrl(show.backdrop_path)" alt="{{ show.name ? show.name : show.title }}" />
+    <div class="additional-info" *ngIf="show === hoveredShow">
+
+      
+
+      <div class="info-footer ">
+        <app-info-modal [tvData]="show"  style="position: absolute; right:0;"></app-info-modal>
+        <h4 class="text-uppercase text-start show-heading">{{ show.name ? show.name : show.title }}</h4>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+</div>
+</div>
+
+
+
+
+

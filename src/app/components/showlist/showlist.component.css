@@ -1,0 +1,161 @@
+.tv-show-list-container {
+  margin-top: 40px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.tv-show-list {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding-left: 30px;
+  padding-top:10px;
+  position: relative;
+}
+
+/* Make scrollbar invisible */
+.tv-show-list::-webkit-scrollbar {
+  height: 0px; /* Width of the scrollbar */
+  width:0px;
+
+}
+.tv-show-list::-webkit-scrollbar:vertical {
+  width: 8px; /* Width of the scrollbar */
+  height:8px;
+
+}
+
+.tv-show-list::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Make the thumb transparent */
+}
+
+.tv-show-list::-webkit-scrollbar-track {
+  background-color: transparent; /* Make the track transparent */
+}
+.tv-show-list::-webkit-scrollbar-thumb:vertical {
+  background-color: transparent; /* Make the thumb transparent */
+}
+
+/* Customize y-axis scrollbar track */
+.tv-show-list::-webkit-scrollbar-track:vertical {
+  background-color: transparent; /* Make the track transparent */
+}
+
+.tv-show-card:hover .additional-info {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+.tv-show-card {
+  position: relative;
+  display:block;
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  margin-right:10px;
+  text-align: center;
+  transition: transform 0.2s;
+  cursor: pointer;
+  width:300px;
+  border-radius: 8px;
+
+}
+
+
+.tv-show-card:last-child {
+  margin-right: 0;
+}
+
+.tv-show-card:hover {
+  z-index: 999999;
+  transform: scale(1.09);
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+.show-poster {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.banner img {
+  max-width: 100%;
+  height: auto;
+}
+
+.additional-info {
+  position: absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.363);
+  color: white;
+  padding: 10px;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.3s;
+  z-index: 2;
+}
+
+
+.card-content {
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.card-content:hover {
+  z-index: 9999;
+  background-color: transparent;
+}
+.show-title {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.more{
+  position: absolute;
+  top:15px;
+  right:0;
+  background-color: rgba(92, 85, 85, 0.712);
+}
+
+.more:hover {
+  background-color: rgba(36, 31, 31, 0.815); /* Adjust the alpha value for desired transparency */
+}
+
+
+.info-footer{
+  position: relative;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.show-heading{
+  border-left:3px solid red;
+  padding-left:10px;
+  position: absolute;
+  bottom:0;
+}
+
+.heading{
+  position: relative;
+
+}
+
+.arrow {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 1.2em;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.heading:hover .arrow {
+  transform: translateX(5px);
+}
+
